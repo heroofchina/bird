@@ -2,6 +2,8 @@ var colors=require('colors');
 var http=require('http');
 var urlutil =require('url');
 var qs=require('querystring');
+var fs = require('fs');
+	
 var bird=(function(){
 	var routerstack={};
 	var net=function(request,response){
@@ -18,7 +20,20 @@ var bird=(function(){
 			response.write(obj);
 			response.end();
 		}
-		if(pathname!=='/favicon.ico'){routerstack[pathname](request,response);}
+		response.sendPage=function(pagepath,data){
+			    response.writeHead(200,{'Content-Type':'text/html'})
+				// 如果url=‘/’ ,读取指定文件下的html文件，渲染到页面。
+				fs.readFile('./index.html','utf-8',function(err,data){
+				if(err){
+				  throw err ;
+				}
+				console.log(data);
+				response.end(data);
+				});
+		}
+		if(pathname!=='/favicon.ico'){
+			routerstack[pathname](request,response);
+		}
 		
 	}
 	var start=function(port,ops,callback){
@@ -59,6 +74,9 @@ router.get('/login',(request,response)=>{
    	'no':'0',
    	'userid':'1000111001101esced768sda'
    });
+});
+router.get('/app',(request,response)=>{
+   response.sendPage('',{message:'hello world'});
 });
 bird.start(3000,router,()=>{
 	console.log('server start'.green);
