@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="video_container">
+  <scroll-video 
+  video-list="{{videoList}}"
+  threshold-value="{{thresholdValue}}"
+  current-page="{{videoPage}}"
+  max-number="{{maxNumber}}"
+  max-page="{{maxPage}}"
+  tool-bar="{{toolBar}}"
+  bind:swipeDown="swipeDown"
+  bind:swipeUpper="swipeUpper"
+
+  bind:swipeToStart="swipeToStart"
+  bind:swipeToEnd="swipeToEnd"
+  >
+
+  </scroll-video>
+</view>
