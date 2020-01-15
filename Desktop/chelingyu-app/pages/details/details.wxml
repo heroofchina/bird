@@ -1,0 +1,44 @@
+<!--pages/details/details.wxml-->
+<view class="view-box">
+  <view class="weui-cells" style="margin-top: 0;">
+    <view class="weui-cell">
+      <view class="weui-cell__hd">发布时间：</view>
+      <view class="weui-cell__bd text-right" style="width: 100%;">{{demandList.createTime}}</view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">17位编码：</view>
+      <view class="weui-cell__bd text-right" style="width: 100%;">{{demandList.code}}</view>
+    </view>
+  </view>
+  <view wx:if="{{feedbackList.length > 0}}">
+    <view class='body' wx:for="{{feedbackList}}" wx:key="">
+      <view class="weui-cells__title">
+        <span>{{item.salerName}}</span>
+        <span class="pull-right input-image" bindtap='_phone' data-phone='{{item.salerPhone}}'>
+          <image src='/img/lianxi.png'></image>
+        </span>
+      </view>
+      <view class='name'>{{item.demandInfoVo.name}}</view>
+      <view class='info'>
+        <view>原厂</view>
+        <view>￥{{item.factoryMoney || '--'}}</view>
+        <view>{{item.factoryQuality || '--'}}个月保质期</view>
+      </view>
+      <view class='info'>
+        <view>品牌</view>
+        <view>￥{{item.brandMoney || '--'}}</view>
+        <view>{{item.brandQuality || '--'}}个月保质期</view>
+      </view>
+      <view class='info'>
+        <view>旧件</view>
+        <view>￥{{item.oldMoney || '--'}}</view>
+        <view>{{item.oldQuality || '--'}}个月保质期</view>
+      </view>
+      <view class='info'>
+        <view>下线</view>
+        <view>￥{{item.offlineMoney || '--'}}</view>
+        <view>{{item.offlineQuality || '--'}}个月保质期</view>
+      </view>
+    </view>
+  </view>
+</view>

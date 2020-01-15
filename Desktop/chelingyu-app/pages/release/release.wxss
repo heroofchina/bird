@@ -1,0 +1,157 @@
+/* pages/release/release.wxss */
+
+.left {
+  margin: 20rpx;
+  display: inline-block;
+  width: 20%;
+}
+
+.left image {
+  height: 120rpx;
+  width: 160rpx;
+}
+
+.right {
+  margin-left: 20rpx;
+  display: inline-block;
+  width: 70%;
+}
+
+.name {
+  font-size: 24rpx;
+  height: 50rpx;
+}
+
+.nameimage{
+  position: relative;
+  right: -450rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.address {
+  font-size: 24rpx;
+  color: #727171;
+}
+
+.address image {
+  height: 24rpx;
+  width: 24rpx;
+}
+
+.phone {
+  font-size: 22rpx;
+  color: #727171;
+  display: inline-block;
+}
+
+.phone image {
+  height: 22rpx;
+  width: 22rpx;
+}
+
+.wechat {
+  margin-left: 30rpx;
+  font-size: 22rpx;
+  color: #727171;
+  display: inline-block;
+}
+
+.wechat image {
+  height: 22rpx;
+  width: 22rpx;
+}
+
+.service{
+  height: 220rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.service image{
+  position: relative;
+  top:10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.check{
+  margin-bottom: 10px;
+  margin-left: 15rpx;
+  border-radius: 5px;
+  height: 60rpx;
+  background-color: #3f52b4;
+  width: 132rpx;
+  color: #ffffff;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 60rpx;
+  display: inline-block;
+}
+.album{
+  margin-top: 20rpx;
+  display:inline-block; 
+}
+.album image{
+  height: 50rpx;
+  width: 50rpx;
+}
+.title{
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #3f52b4;
+  display:inline-block; 
+}
+.title image{
+  position: relative;
+  right:-470rpx;
+  height: 25rpx;
+  width: 25rpx;
+}
+.body{
+  border-top: 1rpx solid #eaeaea;
+  border-bottom: 1rpx solid #eaeaea;
+  margin-left: 20rpx;
+  width:95%;
+}
+.photo view{
+  height: 214rpx;
+  width: 214rpx;
+  margin: 10rpx;
+  display: inline-block;
+}
+.photo image{
+  height: 214rpx;
+  width: 214rpx;
+}
+
+.foot{
+  margin-left: 20rpx;
+  margin-bottom: 30rpx;
+  width:95%;
+}
+.sub{
+  margin-top: 20rpx;
+  margin-bottom: 50rpx;
+  margin-left: 18rpx;
+  width: 95%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.sub button{
+  color: #ffffff;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  background-color:#4357c0; 
+}
+
+.input-image image{
+  left: 0;
+}

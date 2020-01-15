@@ -1,0 +1,26 @@
+<!--pages/recharge/recharge.wxml-->
+<!-- <view class='top' wx:if="{{userInfo.serviceUserVo.vipStatus == 1}}">成为会员，查看全国城市批发商</view>
+<view class='top' wx:if="{{userInfo.serviceUserVo.vipStatus == 0}}">会员到期时间：{{userInfo.serviceUserVo.vip}}</view> -->
+<!-- <view class='top'>成为会员，查看全国城市批发商</view>
+<view class='top'>请添加系统管理员微信进行会员咨询</view>
+<view class='top'>管理员微信：17610908000</view> -->
+<!-- <view wx:for="{{list}}" wx:key="" class="{{id == item.id ? 'year1' : 'year'}}" data-id="{{item.id}}" data-money="{{item.selling}}" bindtap='_selection'>
+  <view class='title'>{{item.title}}</view>
+  <view class='money'>￥{{item.selling}}</view>
+  <view class='money2'>￥{{item.original}}</view>
+</view>
+<view class='sub' bindtap='_pay'>
+  <button>确认充值</button>
+</view> -->
+
+<view class="view-box">
+  <view class="weui-cells__title">开通说明</view>
+  <view class="hy-card primary-color">
+    <view>成为会员，查看全国城市批发商</view>
+    <view>请添加系统管理员微信进行会员咨询</view>
+    <view>管理员微信：17610908000</view>
+  </view>
+  <view style="padding: 20px 30px;">
+    <button bindtap='goback' class="weui-btn weui-btn_primary">我知道了</button>
+  </view>
+</view>

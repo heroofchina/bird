@@ -1,0 +1,62 @@
+<!--pages/mine/mine.wxml-->
+<view class="view-box" style="padding-bottom: 50px;">
+  <view class="weui-panel">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd">
+          <image class="weui-media-box__thumb" src="{{userInfo.serviceUserVo.img}}" alt=""></image>
+        </view>
+        <view class="weui-media-box__bd">
+          <h4 class="weui-media-box__title">{{userInfo.serviceUserVo.name}}</h4>
+          <p class="weui-media-box__desc">我的积分：0</p>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">功能列表</view>
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">
+        <navigator hover-class='none' url='/pages/recharge/recharge'>
+          我的会员
+        </navigator>
+      </view>
+      <view class="weui-cell__ft"></view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">
+        <navigator hover-class='none' url='/pages/release/release'>
+          厂商名片
+        </navigator>
+      </view>
+      <view class="weui-cell__ft"></view>
+    </view>
+  </view>
+  <view style="padding: 20px 30px;">
+    <button bindtap='out' class="weui-btn weui-btn_primary">退出登录</button>
+  </view>
+  <view class="footer">
+    <view class="footer-box">
+      <view class="item cart">
+        <view class="placeholder">
+          <navigator hover-class='none' url='/pages/feedback/feedback'>
+            收到报价
+          </navigator>
+        </view>
+      </view>
+      <view class="item cart pay" bindtouchstart='startHandel' bindtouchend='endHandle'>
+        <view class="placeholder input-image">
+          <span>搜商家</span>
+          <image src="/img/microphone-2.png" style="left: 5px; top: 2px;"></image>
+        </view>
+      </view>
+      <view class="item cart">
+        <view class="placeholder">
+          <navigator hover-class='none' url='/pages/demand/demand'>
+            {{num > 0 ? '询价(' + num + ')' : '发布询价'}}
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

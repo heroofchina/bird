@@ -1,0 +1,11 @@
+<!--pages/history/history.wxml-->
+<view class='header'>
+  <image src='/img/history.png'></image>
+  历史项目
+</view>
+<view class='info' wx:for="{{list}}" wx:key="">
+  <view class='time'>{{item.createTime}}</view>
+  <view class='service' wx:for="{{item.projectName}}" wx:key="">
+  {{item}}
+  </view>
+</view>

@@ -1,0 +1,73 @@
+<!--pages/register/register.wxml-->
+<view class="view-box">
+  <form bindsubmit="formSubmit">
+    <view class="weui-cells weui-cells_form" style="margin-top: 0;">
+      <view class="weui-cell">
+          <view class="weui-cell__hd input-image">
+            <image src='/img/num.png'></image>
+          </view>
+          <view class="weui-cell__bd">
+              <input name='account' type='number' value='{{account}}' placeholder='请输入手机号' maxlength="11" bindinput="doClick"></input>
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_vcode">
+          <view class="weui-cell__hd input-image">
+            <image src='/img/code.png'></image>
+          </view>
+          <view class="weui-cell__bd">
+              <input name='code' placeholder='请输入验证码'></input>
+          </view>
+          <view class="weui-cell__ft">
+            <button disabled="{{b}}" class="weui-vcode-btn" bindtap='code' >{{msg}}</button>
+          </view>
+      </view>
+      <view class="weui-cell">
+          <view class="weui-cell__hd input-image">
+            <image src='/img/pas.png'></image>
+          </view>
+          <view class="weui-cell__bd">
+              <input name='password' type='password' placeholder='请输入密码'></input>
+          </view>
+      </view>
+      <view class="weui-cell">
+          <view class="weui-cell__hd input-image">
+            <image src='/img/pas.png'></image>
+          </view>
+          <view class="weui-cell__bd">
+              <input name='password1' type='password' placeholder='请确认密码'></input>
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__hd input-image">
+            <image src='/img/city.png'></image>
+          </view>
+          <view class="weui-cell__bd text-right" style="width: 100%;">
+              <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                  {{region[0]}}{{region[1]}}{{region[2]}}
+              </picker>
+          </view>
+          <view class="weui-cell__ft"></view>
+      </view>
+      <view class="weui-cell">
+          <view class="weui-cell__hd input-image">
+            <image src='/img/name.png'></image>
+          </view>
+          <view class="weui-cell__bd">
+              <input name='name' placeholder='请输入维修厂名称'></input>
+          </view>
+      </view>
+    </view>
+    <view class='agreement'>
+      <checkbox-group name="checkbox">
+        <checkbox value='ture'> 
+        <navigator hover-class='none' url='/pages/xieyi/xieyi'>
+          已阅读并同意<text class="info-color">《车领驭用户注册协议》</text>
+        </navigator>
+        </checkbox>
+      </checkbox-group>
+    </view>
+    <view style="padding: 20px 30px;">
+      <button class="weui-btn weui-btn_primary" form-type="submit" disabled='{{disabled}}' open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">注 册</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,45 @@
+<!--pages/indexSearch/indexSearch.wxml-->
+<view class="view-box">
+  <view class="search">
+    <view class="{{searchBar.searchBarClasses}}">
+      <form class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <i class="weui-icon-search"></i>
+            <input type="search" class="weui-search-bar__input" placeholder="请输入商家名称" value="{{searchBar.value}}" focus="{{searchBar.focus}}" bindinput="searchBarInput"/>
+            <a bindtap="onClearSearchBar" class="weui-icon-clear"></a>
+        </view>
+        <label bindtap="onClickSearchBar" class="weui-search-bar__label"  style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1); top: 6px;">
+          <i class="weui-icon-search"></i>
+          <span>搜索</span>
+        </label>
+      </form>
+      <a bindtap="onCancelSearchBar" class="weui-search-bar__cancel-btn">取消</a>
+    </view>
+  </view>
+  <view class="weui-panel" wx:if="{{wholesaler && wholesaler.length > 0}}" style="margin-top: 0;">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_appmsg" wx:for="{{wholesaler}}" wx:key bindtap="showDetail" data-id="{{item.id}}">
+        <view class="weui-media-box__hd">
+          <image class="weui-media-box__thumb" src="{{item.img || '/img/add-img.png'}}" alt=""></image>
+        </view>
+        <view class="weui-media-box__bd list-box">
+          <view class="input-image icon-tag">
+            <image wx:if="{{item.authentication == 0}}" src='/img/zheng.png'></image>
+            <image wx:if="{{item.qa == 0}}" src='/img/bao.png'></image>
+            <image wx:if="{{item.sincerity == 0}}" src='/img/cheng.png'></image>
+          </view>
+          <h4 class="weui-media-box__title" style="font-size: 15px;">{{item.name}}</h4>
+          <p class="weui-media-box__desc list-desc input-image">
+            <image src='/img/di.png'></image> {{item.address}}
+          </p>
+        </view>
+        <view class="tu-right-arrow input-image" data-phone='{{item.phone1}}' data-id="{{item.id}}" data-openId="{{item.openId}}" catchtap='_phone'>
+          <image src='/img/dh2.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line" wx:else>
+    <span class="weui-loadmore__tips">请搜索数据</span>
+  </view>
+</view>

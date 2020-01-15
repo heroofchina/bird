@@ -1,0 +1,10 @@
+<!--pages/vcate/vcate.wxml-->
+<block wx:for="{{list}}">
+  <view class='letter' id="letter{{index}}">{{index}}</view>
+  <view class='item' wx:for="{{item}}" wx:for-item="idx">
+    {{idx.name}}
+  </view>
+</block>
+<view class='letters'>
+  <text wx:for="{{list}}" bindtap='chooseLetter' data-letter="{{index}}">{{index}}</text>
+</view>

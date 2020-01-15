@@ -1,0 +1,24 @@
+<!--pages/reset/reset.wxml-->
+<view class="view-box">
+  <view class="weui-cells weui-cells_form" style="margin-top: 0;">
+      <view class="weui-cell">
+        <view class="weui-cell__hd input-image">
+            <image src='/img/pas.png'></image>
+          </view>
+          <view class="weui-cell__bd">
+              <input type='password' placeholder='  请输入密码' maxlength="11" bindinput="click"></input>
+          </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd input-image">
+            <image src='/img/pas.png'></image>
+          </view>
+          <view class="weui-cell__bd">
+            <input type='password' placeholder='  请输确认密码' bindinput="doClick"></input>
+          </view>
+      </view>
+  </view>
+  <view style="padding: 20px;" bindtap="forget">
+    <button class="weui-btn weui-btn_primary">完成</button>
+  </view>
+</view>

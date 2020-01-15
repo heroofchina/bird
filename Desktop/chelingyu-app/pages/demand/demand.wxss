@@ -1,0 +1,168 @@
+/* pages/demand/demand.wxss */
+page{
+  background-color: #f0eff5;
+}
+.cate{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  display: inline-block;
+  background-color: #ffffff;
+}
+.cate picker{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+}
+.name{
+  height: 90rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.name image{
+  position: relative;
+  top:10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.name input{
+  height: 90rpx;
+  color: #999999;
+  background: #ffffff;
+}
+.parts{
+  width: 710rpx;
+  background-color: #ffffff;
+  margin-left: 20rpx;
+  border-bottom: #999999 solid 1px;
+}
+.brand{
+  font-size:24rpx;
+  display: inline-block; 
+  width: 90%;
+}
+.delete{
+  font-size:24rpx;
+  display: inline-block;
+  color: #3f52b4; 
+}
+.add{
+  margin-top: 30rpx;
+  margin-left: 18rpx;
+  width: 200rpx;
+  height: 60rpx;
+  display: inline-block;
+}
+.add button{
+  color: #ffffff;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  background-color:#4357c0; 
+  line-height: 60rpx;
+  font-size: 24rpx;
+  display: inline-block;
+}
+
+.sub{
+  margin-top: 80rpx;
+  margin-left: 18rpx;
+  width: 95%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.sub button{
+  color: #ffffff;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  background-color:#4357c0; 
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.window{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color:rgba(0, 0, 0, .5);
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.windowContent{
+  padding: 20rpx 0;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 40% auto;
+  border-radius: 20rpx;
+  position: relative;
+}
+.windowText{
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.windowInput{
+  width: 390rpx;
+  background-color: #ffffff;
+  height: 40rpx;
+  margin-left: 100rpx;
+  margin-bottom: 30rpx;
+  font-size: 24rpx;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 10rpx;
+}
+.windowInput input{
+  height: 40rpx;
+  min-height: 40rpx;
+}
+.windowButton button:nth-child(1){
+  height: 60rpx;
+  width: 200rpx;
+  font-size: 24rpx;
+  display: inline-block;
+  margin-left: 95rpx;
+  background-color: #3f52b4;
+  color: #ffffff;
+}
+.windowButton button:nth-child(2){
+  height: 60rpx;
+  width: 200rpx;
+  font-size: 24rpx;
+  display: inline-block;
+}
+.windowButton button + button {
+  margin-left: 10px;
+}
+.photo2{
+  height: 150rpx;
+  width: 100%;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.photo2 image{
+  position: relative;
+  top:10rpx;
+  width: 160rpx;
+  height: 120rpx;
+  display: inline-block;
+  margin-left: 40rpx;
+}

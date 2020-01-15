@@ -1,0 +1,62 @@
+/* pages/indexSearch/indexSearch.wxss */
+.header{
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  border: 1rpx solid#eaeaea;
+  width: 709rpx;
+  height: 88rpx;
+}
+.header input{
+  width: 80%;
+  height: 100%;
+  line-height: 88rpx;
+  font-size: 24rpx;
+  display: inline-block;
+}
+.header button{
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  font-size: 30rpx;
+  background-color: #ffffff;
+}
+.bodyimg {
+  display: inline-block;
+}
+.bodyimg image{
+  height: 120rpx;
+  width: 162rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.info{
+  width: 460rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.name{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+}
+.history{
+  height: 50rpx;
+  width: 320rpx;
+  font-size: 20rpx;
+  color: #aaa;
+  line-height: 50rpx;
+  overflow: hidden;white-space:nowrap;-ms-text-overflow:ellipsis;-o-text-overflow:ellipsis;text-overflow:ellipsis;  
+}
+.shijian{
+  font-size: 24rpx;
+}
+
+.right{
+  display: inline-block;
+}
+.right image{
+  position: relative;
+  top: -20px;
+  height: 50rpx;
+  width: 55rpx;
+}

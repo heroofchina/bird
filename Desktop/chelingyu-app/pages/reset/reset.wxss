@@ -1,0 +1,80 @@
+/* pages/reset/reset.wxss */
+
+.phone {
+  height: 100rpx;
+  width: 100%;
+  background-color: #fff;
+  display: inline-block;
+  line-height: 100rpx;
+  border: #eaeaea solid 1rpx;
+}
+
+.num {
+  height: 100rpx;
+  width: 65%;
+  display: inline-block;
+}
+
+.num image {
+  position: relative;
+  bottom: 23rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+
+.num input {
+  height: 100%;
+  font-size: 30rpx;
+  display: inline-block;
+}
+
+.code {
+  height: 100%;
+  display: inline-block;
+}
+
+.code input {
+  text-align: center;
+  height: 100%;
+  border: none;
+  background-color: #fff;
+  font-size: 25rpx;
+  display: inline-block;
+}
+
+.code1 {
+  background-color: #fff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: #eaeaea solid 1rpx;
+}
+
+.code1 image {
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+
+.code1 input {
+  height: 100%;
+  font-size: 30rpx;
+  display: inline-block;
+}
+
+.sub {
+  margin-left: 18rpx;
+  width: 95%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}
+
+.sub button {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  background-color: #4357c0;
+}

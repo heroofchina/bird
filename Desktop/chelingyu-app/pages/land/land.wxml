@@ -1,0 +1,27 @@
+<!--pages/land/land.wxml-->
+<view class="view-box">
+    <form bindsubmit="formSubmit">
+        <view class="weui-cells weui-cells_form" style="margin-top: 0;">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">手机号：</view>
+                <view class="weui-cell__bd">
+                    <input name='account' type='number' placeholder='请输入手机号' maxlength="11"></input>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">密  码：</view>
+                <view class="weui-cell__bd">
+                    <input name='password' type='password' placeholder='请输入密码'></input>
+                </view>
+            </view>
+        </view>
+        <view style="padding: 30px;">
+            <button form-type="submit" class="weui-btn weui-btn_primary">登 录</button>
+        </view>
+    </form>
+    <view class='forget'>
+        <navigator hover-class='none' class="info-color" url='/pages/forget/forget'>
+            忘记密码
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,60 @@
+/* pages/input/input.wxss */
+.page{
+  margin-bottom: 150rpx;
+}
+.header{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #3f52b4;
+}
+.header image{
+  position: relative;
+  top: 5rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.uncheck{
+  padding: 10rpx;
+  min-width:150rpx;
+  margin-top: 20rpx;
+  margin-left: 15rpx;
+  border-radius: 5px;
+  height: 80rpx;
+  background-color: #eaeaea;
+  color: #828282;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  display: inline-block;
+}
+.check{
+  padding: 10rpx;
+  min-width:150rpx;
+  margin-top: 20rpx;
+  margin-left: 15rpx;
+  border-radius: 5px;
+  height: 80rpx;
+  background-color: #3f52b4;
+  color: #ffffff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  display: inline-block;
+}
+.sub{
+  margin-left: 18rpx;
+  position: fixed;
+  bottom:10rpx;
+  width: 95%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.sub button{
+  color: #ffffff;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  background-color:#4357c0; 
+}

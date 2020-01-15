@@ -1,0 +1,180 @@
+/* pages/register/register.wxss */
+page{
+   background-image: url(https://chelingyu.mme5.com/uploadImg/bc2.png)
+}
+.phone{
+  height: 100rpx;
+  width: 100%;
+  position: relative;
+  top:20rpx;
+  background-color: #ffffff;
+  display: inline-block;
+  line-height: 100rpx;
+}
+.num{
+  height: 100rpx;
+  width: 65%;
+  display: inline-block;
+}
+.num image{
+  position: relative;
+  bottom: 23rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  display: inline-block;
+}
+.num input{
+  height: 100%;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.code{
+  height: 100%;
+  display: inline-block;
+}
+.code button{
+  text-align: center;
+  line-height: 100rpx;
+  height: 100%;
+  border: none;
+  background-color: #ffffff;
+  font-size: 25rpx;
+  display: inline-block;
+}
+.code1{
+  position: relative;
+  top:30rpx;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.code1 image, .input-image image{
+  position: relative;
+  bottom: 23rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  display: inline-block;
+}
+.code1 input{
+  height: 100%;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.password{
+  position: relative;
+  top:50rpx;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.password image{
+  position: relative;
+  bottom: 23rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  display: inline-block;
+}
+.password input{
+  height: 100%;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.password1{
+  position: relative;
+  top:70rpx;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.password1 image{
+  position: relative;
+  bottom: 23rpx;
+  width: 50rpx;
+  margin-left: 20rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+.password1 input{
+  height: 100%;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.name{
+  position: relative;
+  top:110rpx;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.name image{
+  position: relative;
+  bottom: 23rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  display: inline-block;
+}
+.name input{
+  height: 100%;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.agreement{
+  margin-left: 10rpx;
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.agreement checkbox{
+  zoom: 65%;
+}
+.sub{
+  margin-left: 18rpx;
+  position: relative;
+  top:200rpx;
+  width: 95%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.sub button{
+  color: #ffffff;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  background-color:#4357c0; 
+}
+.city{
+  position: relative;
+  top:90rpx;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: inline-block;
+}
+.city image{
+  position: relative;
+  top:10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.city picker{
+  margin-left: 20rpx;
+  width: 70%;
+  height: 90rpx;
+  color: #999999;
+  line-height: 90rpx;
+  display: inline-block;
+}

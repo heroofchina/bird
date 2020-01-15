@@ -1,0 +1,57 @@
+/* pages/salerInfo/salerInfo.wxss */
+.top{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  width: 710rpx;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 3px #eaeaea;
+  border-radius: 5px;
+}
+.top image{
+  width: 100%;
+}
+.title{
+  height: 70rpx;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #eaeaea;
+}
+.title image{
+  height:28rpx;
+  width: 28rpx;
+}
+.address{
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #d1d1d1;
+  line-height: 80rpx;
+  width: 600rpx;
+  overflow: hidden;white-space:nowrap;-ms-text-overflow:ellipsis;-o-text-overflow:ellipsis;text-overflow:ellipsis;  
+  display: inline-block;
+}
+.address image{
+  height:28rpx;
+  width: 28rpx;
+}
+.bottom{
+  display: inline-block;
+}
+.bottom image{
+  position: relative;
+  left: 40rpx;
+  top:-20rpx;
+  height: 36rpx;
+  width: 36rpx;
+}
+.ye{
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #3f52b4;
+  font-weight: bold;
+}
+.wu{
+  margin: 20rpx;
+  font-size: 24rpx;
+}

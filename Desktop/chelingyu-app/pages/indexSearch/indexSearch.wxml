@@ -1,0 +1,20 @@
+<!--pages/indexSearch/indexSearch.wxml-->
+<form  bindsubmit="formSubmit">
+  <view class='header'>
+    <input name='search' placeholder='   客户名或车牌号'></input>
+    <button form-type="submit">搜索</button>
+  </view>
+</form>
+<view class='body'  wx:for="{{customer}}" wx:key>
+  <view class='bodyimg'>
+    <image src='/img/li.png'></image>
+  </view>
+  <view class='info'>
+      <view class='name'>{{item.customerVo.name}}  {{item.customerVo.plate}}</view>
+      <view class='history'>{{item.projectName}}</view>
+      <view class='shijian'>最近联系：{{item.customerVo.time}}</view>
+  </view>
+  <view class='right' data-phone='{{item.customerVo.phone}}' bindtap='_phone'>
+      <image src='/img/dh2.png'></image>
+    </view>
+</view>

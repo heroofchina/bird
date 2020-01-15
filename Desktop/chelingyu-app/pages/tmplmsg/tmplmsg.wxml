@@ -1,0 +1,3 @@
+<view class="view-box">
+  <h4>{{tip}}</h4>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "alphabet": "/component/alphabet1/index"
+  },
+  "navigationBarTitleText": "二级分类"
+}

@@ -1,0 +1,108 @@
+/* pages/find/find.wxss */
+
+.top {
+  margin-top: 20rpx;
+  height: 80rpx;
+  width: 100%;
+}
+
+.top image {
+  position: relative;
+  margin-left: 20rpx;
+  height: 30rpx;
+  top: -20rpx;
+  width: 30rpx;
+  display: inline-block;
+}
+
+.top picker {
+  position: relative;
+  margin-left: 10rpx;
+  top: -25rpx;
+  width: 100rpx;
+  height: 80rpx;
+  display: inline-block;
+  font-size: 28rpx;
+  color: #3f52b4;
+}
+
+.header {
+  border-radius: 10rpx;
+  border: 1rpx solid#eaeaea;
+  width: 580rpx;
+  height: 80rpx;
+  display: inline-block;
+}
+
+.headerinput {
+  width: 80%;
+  height: 100%;
+  font-size: 24rpx;
+  display: inline-block;
+}
+
+.headerbutton {
+  width: 20%;
+  display: inline-block;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  text-align: center;
+  height: 80rpx;
+}
+
+.banner {
+  height: 180px;
+}
+.banner .image-item {
+  height: 180px;
+  width: 100%;
+  background-size: 100% 100%;
+  object-fit: cover;
+}
+
+.left {
+  width: 170rpx;
+  box-shadow: 10rpx 10rpx 10rpx #e6e6e6;
+}
+
+.view {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+  border: solid 1rpx #e6e6e6;
+  font-size: 0.8rem;
+}
+
+.view1 {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  background-color: #1106ac;
+  border: solid 1rpx #1106ac;
+  font-size: 0.8rem;
+}
+
+.right {
+  width: 550rpx;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.title {
+  margin-left: 22rpx;
+  width: 100rpx;
+  text-align: center;
+  display: inline-block;
+  font-size: 24rpx;
+}
+
+.title image {
+  height: 80rpx;
+  width: 80rpx;
+}

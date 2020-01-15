@@ -1,0 +1,83 @@
+<!--pages/find/find.wxml-->
+<view class="view-box" style="padding-bottom: 50px;">
+  <view class="search">
+    <view class="{{searchBar.searchBarClasses}}">
+      <form class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <i class="weui-icon-search"></i>
+            <input type="search" class="weui-search-bar__input" placeholder="请输入客户名称/车牌号" value="{{searchBar.value}}" focus="{{searchBar.focus}}" bindinput="searchBarInput"/>
+            <a bindtap="onClearSearchBar" class="weui-icon-clear"></a>
+        </view>
+        <label bindtap="onClickSearchBar" class="weui-search-bar__label"  style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1); top: 6px;">
+          <i class="weui-icon-search"></i>
+          <span>搜索</span>
+        </label>
+      </form>
+      <a bindtap="onCancelSearchBar" class="weui-search-bar__cancel-btn">取消</a>
+    </view>
+  </view>
+  <view class="weui-cells__title info-color input-image">
+    <image src='/img/qie.png'></image>
+    <view style="display: inline-block; position: relative; top: -2px;">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        {{region[0]}} > {{region[1]}}
+      </picker>
+    </view>
+  </view>
+  <swiper class='banner' autoplay='ture' interval='5000' circular='ture'>
+    <swiper-item wx:for="{{banner}}" wx:key="{{item.img}}">
+      <view bindtap="showSalerInfo" data-id="{{item.wholesalerId}}">
+        <view class="image-item" style="background: url({{item.img}}) no-repeat center;"></view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view style="background: #ffffff; padding: 10px 10px 35px 10px;">
+    <view class="weui-flex">
+        <view class="left">
+          <view wx:for="{{cateList}}" wx:key="{{item.id}}">
+            <view class="{{id == item.id ? 'view1' : 'view'}}" data-id="{{item.id}}" bindtap='_selection'>{{item.title}}</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="right">
+            <view class='title' wx:for="{{vcateList}}" wx:key="{{item.id}}">
+              <navigator hover-class='none' url='/pages/salerList/salerList?vcateId={{item.id}}&&cityId={{cityId}}&&title={{item.title}}'>
+                <image src='{{item.img}}'></image>
+                <view>{{item.title}}</view>
+              </navigator>
+            </view>
+            <view class='title' wx:if="{{vcateList.length > 18}}">
+              <navigator hover-class='none' url='/pages/alphabetList/alphabetList?cateId={{id}}&&cityId={{cityId}}'>
+                <image src='/img/more.jpg'></image>
+                <view>更多</view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="footer-box">
+      <view class="item cart">
+        <view class="placeholder">
+          <navigator hover-class='none' url='/pages/feedback/feedback'>
+            收到报价
+          </navigator>
+        </view>
+      </view>
+      <view class="item cart pay" bindtouchstart='startHandel' bindtouchend='endHandle'>
+        <view class="placeholder input-image">
+          <span>搜商家</span>
+          <image src="/img/microphone-2.png" style="left: 5px; top: 2px;"></image>
+        </view>
+      </view>
+      <view class="item cart">
+        <view class="placeholder">
+          <navigator hover-class='none' url='/pages/demand/demand'>
+            {{num > 0 ? '询价(' + num + ')' : '发布询价'}}
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

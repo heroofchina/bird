@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class="view-box" style="padding-bottom: 50px;">
+  <view class="{{searchBar.searchBarClasses}}">
+      <form class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+              <i class="weui-icon-search"></i>
+              <input type="search" class="weui-search-bar__input" placeholder="请输入客户名称/车牌号" value="{{searchBar.value}}" focus="{{searchBar.focus}}" bindinput="searchBarInput"/>
+              <a bindtap="onClearSearchBar" class="weui-icon-clear"></a>
+          </view>
+          <label bindtap="onClickSearchBar" class="weui-search-bar__label"  style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1); top: 6px;">
+              <i class="weui-icon-search"></i>
+              <span>搜索</span>
+          </label>
+      </form>
+      <a bindtap="onCancelSearchBar" class="weui-search-bar__cancel-btn">取消</a>
+  </view>
+  <view class='header' style="overflow: hidden; margin-top: 10px;">
+    <view class="time {{time == 'create' ? 'active' : ''}}" data-time="create" bindtap='_selection'>创建时间</view>
+    <view class="time {{time == 'time' ? 'active' : ''}}" data-time="time" bindtap='_selection'>联系时间</view>
+    <view class="time {{time == 'remind' ? 'active' : ''}}" data-time="remind" bindtap='_selection'>提醒时间</view>
+    <!--<view class='img'>
+      <navigator hover-class='none' url='/pages/indexSearch/indexSearch'>
+        <image src='/img/search.png'></image>
+      </navigator>
+    </view>-->
+    <view class='img pull-right primary-color' style="margin-right: 10px;">
+      <navigator hover-class='none' url='/pages/add/add?id={{userInfo.serviceUserVo.id}}'>
+        <span class="input-image">
+          <image src='/img/plus.png'></image>
+        </span>
+      </navigator>
+    </view>
+  </view>
+  <view class="weui-panel" wx:if="{{customer && customer.length > 0}}">
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_appmsg" wx:for="{{customer}}" wx:key bindtap="detail" data-item="{{item}}">
+            <view class="weui-media-box__hd">
+              <image class="weui-media-box__thumb" src="{{item.customerVo.img}}" alt=""></image>
+            </view>
+            <view class="weui-media-box__bd">
+                <h4 class="weui-media-box__title" style="font-size: 15px;">{{item.customerVo.name}} {{item.customerVo.plate}}</h4>
+                <p class="weui-media-box__desc" wx:if="{{item.customerVo.note}}">{{item.customerVo.note}}</p>
+                <p class="weui-media-box__desc">最近提醒：{{item.customerVo.remindTime}}</p>
+            </view>
+            <view class="tu-right-arrow input-image" catchtap="_phone" data-phone="{{item.customerVo.phone}}">
+              <image src='/img/dh2.png'></image>
+            </view>
+        </view>
+    </view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line" wx:else>
+    <span class="weui-loadmore__tips">暂无数据</span>
+  </view>
+  <view class="window {{isTrue?'show':'hide'}}">
+    <navigator hover-class="none" url='/pages/salerInfo/salerInfo?id={{banner[0].wholesalerId}}'>
+      <image class="windowimage" src="{{banner[0].img}}"></image>
+    </navigator>
+    <button bindtap='hide'>关闭</button>
+  </view>
+  <view class="footer">
+    <view class="footer-box">
+      <view class="item cart">
+        <view class="placeholder">
+          <navigator hover-class='none' url='/pages/feedback/feedback'>
+            收到报价
+          </navigator>
+        </view>
+      </view>
+      <view class="item cart pay" bindtouchstart='startHandel' bindtouchend='endHandle'>
+        <view class="placeholder input-image">
+          <span>搜商家</span>
+          <image src="/img/microphone-2.png" style="left: 5px; top: 2px;"></image>
+        </view>
+      </view>
+      <view class="item cart">
+        <view class="placeholder">
+          <navigator hover-class='none' url='/pages/demand/demand'>
+            {{num > 0 ? '询价(' + num + ')' : '发布询价'}}
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

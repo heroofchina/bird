@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/input/input",
+    "pages/history/history",
+    "pages/index/index",
+    "pages/information/information",
+    "pages/license/license",
+    "pages/album/album",
+    "pages/xieyi/xieyi",
+    "pages/reset/reset",
+    "pages/forget/forget",
+    "pages/land/land",
+    "pages/share/share",
+    "pages/release/release",
+    "pages/recharge/recharge",
+    "pages/salerInfo/salerInfo",
+    "pages/vcate/vcate",
+    "pages/find/find",
+    "pages/mine/mine",
+    "pages/salerList/salerList",
+    "pages/add/add",
+    "pages/info/info",
+    "pages/indexSearch/indexSearch",
+    "pages/search/search",
+    "pages/register/register",
+    "pages/details/details",
+    "pages/receive/receive",
+    "pages/feedback/feedback",
+    "pages/needs/needs",
+    "pages/demand/demand",
+    "pages/logs/logs",
+    "pages/alphabetList/alphabetList",
+    "pages/tmplmsg/tmplmsg"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3f52b4",
+    "navigationBarTitleText": "车领驭",
+    "navigationBarTextStyle": "white"
+  },
+  "plugins": {
+    "QCloudAIVoice": {
+      "version": "1.0.1",
+      "provider": "wx3e17776051baf153"
+    }
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#4169E1",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "img/1.1.png",
+        "iconPath": "img/1.png",
+        "pagePath": "pages/index/index",
+        "text": "客户"
+      },
+      {
+        "selectedIconPath": "img/2.2.png",
+        "iconPath": "img/2.png",
+        "pagePath": "pages/find/find",
+        "text": "商家"
+      },
+      {
+        "selectedIconPath": "img/4.4.png",
+        "iconPath": "img/4.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

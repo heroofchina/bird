@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+<view class="view-box" style="background: #ffffff;">
+  <view class='img'>
+    <image src='/img/logo.png'></image>
+  </view>
+  <view class='title'>
+    车领驭
+  </view>
+  <view class='phone'>
+    <button open-type="getPhoneNumber" bindgetphonenumber="onGotUserInfo">
+      <image src='/img/phone.png'></image>
+      微信手机号快捷登录
+    </button>
+  </view>
+
+  <view class='login'>
+    <navigator hover-class='none' url='/pages/land/land'>
+      <image src='/img/login.png'></image>
+      账号密码登录
+    </navigator>
+  </view>
+  <view class='register'>
+    <navigator hover-class='none' url='/pages/register/register'>
+      <image src='/img/register.png'></image>
+      新用户注册
+    </navigator>
+  </view>
+</view>

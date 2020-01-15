@@ -1,0 +1,81 @@
+/* pages/mine/mine.wxss */
+page{
+  background-color: #f0eff5;
+}
+.top{
+  /* background-image:  url(https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1560915044&di=aaf0bc64ffb2cb7f2e85935bc4bb693c&src=http://pic.qiantucdn.com/58pic/13/76/13/30E58PICRBs_1024.jpg); */
+  margin-top: 20rpx;
+  width: 100%;
+  height: 185rpx;
+}
+.top image{
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+  height: 120rpx;
+  width: 160rpx;
+  display: inline-block;
+}
+.name{
+  margin-left: 20rpx;
+  height: 160rpx;
+  display: inline-block;
+}
+.title{
+  font-size: 30rpx;
+  display: inline-block;
+}
+.score{
+  font-size: 22rpx;
+  display: inline-block;
+}
+.num{
+  color: #3f52b4;
+  font-size: 22rpx;
+  display: inline-block;
+}
+.member{
+  margin-top: 40rpx;
+  background-color: #ffffff;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+  border-bottom: 1px solid #f0eff5;
+}
+.member image{
+  position: relative;
+  top:5rpx;
+  margin-left: 500rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+.card{
+  background-color: #ffffff;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+}
+.card image{
+  position: relative;
+  top:5rpx;
+  margin-left: 500rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+.sub{
+  margin-top: 200rpx;
+  margin-bottom: 50rpx;
+  margin-left: 18rpx;
+  width: 95%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.sub button{
+  color: #ffffff;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  background-color:#4357c0; 
+}

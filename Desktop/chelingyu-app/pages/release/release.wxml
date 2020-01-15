@@ -1,0 +1,81 @@
+<!--pages/release/release.wxml-->
+<view class="view-box">
+  <view class="weui-panel" style="margin-top: 0;">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_appmsg" bindtap="showDetail">
+        <view class="weui-media-box__hd">
+          <image class="weui-media-box__thumb" src="{{userInfo.serviceUserVo.img}}" alt=""></image>
+        </view>
+        <view class="weui-media-box__bd">
+          <h4 class="weui-media-box__title" style="font-size: 15px;">{{userInfo.serviceUserVo.name}}</h4>
+          <p class="weui-media-box__desc input-image">
+            <image src='/img/di.png'></image> {{userInfo.serviceUserVo.address}}
+          </p>
+          <p class="weui-media-box__desc">
+            <span class="input-image" wx:if="{{userInfo.serviceUserVo.phone}}">
+              <image src='/img/lianxi.png'></image> {{userInfo.serviceUserVo.phone}}
+            </span>
+            <span class="input-image" wx:if="{{userInfo.serviceUserVo.wechat}}">
+              <image src='/img/weixinhao.png'></image> {{userInfo.serviceUserVo.wechat}}
+            </span>
+          </p>
+        </view>
+        <view class="tu-right-arrow input-image">
+          <image src='/img/write.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">主营业务</view>
+  <view class="weui-cells">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class='service2'>
+          <view wx:for="{{userInfo.businessVos}}" wx:key="" class="check">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">商家相册</view>
+  <view class="weui-cells weui-cells_form">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <p class="weui-uploader__title">图片列表</p>
+          </view>
+          <view class="weui-uploader__bd">
+            <ul class="weui-uploader__files">
+              <li wx:for="{{photos}}" wx:key="{{item}}" bindtap="showImage" data-list="{{photos}}" data-image="{{item}}" class="weui-uploader__file" style="background-image:url({{item}})"></li>
+            </ul>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">营业执照</view>
+  <view class="weui-cells weui-cells_form" style="margin-top: 0;">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <p class="weui-uploader__title" wx:if="{{userInfo.serviceUserVo.license}}">图片列表</p>
+            <p class="weui-uploader__title" wx:else>暂无图片</p>
+          </view>
+          <view class="weui-uploader__bd" wx:if="{{userInfo.serviceUserVo.license}}">
+            <ul class="weui-uploader__files">
+              <li bindtap="showImage" data-list="{{[userInfo.serviceUserVo.license]}}" data-image="{{userInfo.serviceUserVo.license}}" class="weui-uploader__file" style="background-image:url({{userInfo.serviceUserVo.license}})"></li>
+            </ul>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="padding: 20px 30px;">
+    <navigator hover-class='none' url='/pages/share/share'>
+      <button class="weui-btn weui-btn_primary">名片预览</button>
+    </navigator>
+  </view>
+</view>

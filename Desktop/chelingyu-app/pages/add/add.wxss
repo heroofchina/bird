@@ -1,0 +1,233 @@
+/* pages/add/add.wxss */
+page{
+  background-color: #f0eff5;
+}
+.photo{
+  margin-top: 20rpx;
+  height: 90rpx;
+  width: 100%;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.photo image{
+  position: relative;
+  top:10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.photo2{
+  height: 150rpx;
+  width: 100%;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.photo2 image{
+  position: relative;
+  top:10rpx;
+  width: 160rpx;
+  height: 120rpx;
+  display: inline-block;
+  margin-left: 40rpx;
+}
+.name{
+  height: 90rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  line-height: 100rpx;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.name image{
+  position: relative;
+  top:10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.name2{
+  height: 90rpx;
+  width: 100%;
+  line-height: 100rpx;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+  border: 1rpx solid #f0eff5;
+}
+.name2 input{
+  height: 90rpx;
+  width: 77%;
+  margin-left: 20rpx;
+  display: inline-block;
+}
+.name2 button{
+  line-height: 90rpx;
+  font-size: 30rpx;
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+}
+.contacts{
+  height: 90rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.contacts image{
+  position: relative;
+  top:10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.contacts input{
+  height: 90rpx;
+  margin-left: 20rpx;
+  color: #999999;
+}
+.lianxi{
+  height: 90rpx;
+  width: 100%;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.lianxi image{
+  position: relative;
+  top:10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.lianxi picker{
+  height: 90rpx;
+  margin-left: 20rpx;
+  color: #999999;
+  border: 2rpx
+}
+.service{
+  height: 220rpx;
+  width: 100%;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.service image{
+  position: relative;
+  top:10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.uncheck{
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-left: 15rpx;
+  border-radius: 5px;
+  height: 80rpx;
+  background-color: #eaeaea;
+  width: 150rpx;
+  color: #828282;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 80rpx;
+  display: inline-block;
+}
+.uncheck.active{
+  background-color: #3f52b4;
+  color: #ffffff;
+}
+.tixing{
+  height: 400rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.tixing picker{
+  margin-left: 240rpx;
+  display: inline-block;
+}
+.tixing image{
+  position: relative;
+  top:10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.tixing input{
+  font-size: 24rpx;
+  border: 1rpx solid #f0eff5;
+  width: 710rpx;
+  height: 232rpx;
+  margin-left: 20rpx;
+  color: #999999;
+}
+.lu{
+  display: inline-block;
+}
+.lu button{
+  background-color: #3f52b4;
+  font-size: 30rpx;
+  color: #ffffff;
+  text-align: center;
+  height: 85rpx;
+  width: 310rpx;
+  margin-left:40rpx;
+  margin-bottom: 20rpx;
+  line-height: 85rpx;
+  display: inline-block;
+}
+.li2{
+  display: inline-block
+}
+.li2 button{
+  background-color: #ffffff;
+  display: inline-block;
+  font-size: 30rpx;
+  text-align: center;
+  height: 85rpx;
+  width: 310rpx;
+  margin-bottom: 20rpx;
+  margin-left:15rpx;
+  line-height: 85rpx;
+}
+.li{
+  display: inline-block
+}
+.li button{
+  background-color: #3f52b4;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 30rpx;
+  text-align: center;
+  height: 85rpx;
+  width: 400rpx;
+  margin-top: 20rpx;
+  margin-left:170rpx;
+  line-height: 85rpx;
+}

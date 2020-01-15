@@ -1,0 +1,62 @@
+/* pages/login/login.wxss */
+page{
+  background-image: url(https://chelingyu.mme5.com/uploadImg/bc1.png)
+}
+.img{
+  margin-top: 100rpx;
+  margin-left: 280rpx;
+}
+.img image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.phone{
+  margin: 50rpx 100rpx 0 100rpx;
+  box-shadow: slategray 3px;
+}
+.phone button{
+  border: none;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  background: #4357c0;
+  text-align: center;
+  color: #ffffff;
+  line-height: 80rpx;
+  font-size: 15px;
+}
+.phone button image{
+  margin-bottom: -10rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.title{
+  margin-top: 20rpx;
+  text-align: center;
+  color: #3f53b3;
+  font-weight: bold;
+  margin-bottom: 100rpx;
+}
+.login{
+  margin-top: 100rpx;
+  margin-left: 50rpx;
+  margin-right: 230rpx;
+  font-size: 30rpx;
+  color: #3f53b3;
+  font-weight: bold;
+  display: inline-block;
+}
+.login image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.register{
+  font-size: 30rpx;
+  color: #3f53b3;
+  font-weight: bold;
+  display: inline-block;
+}
+.register image{
+  width: 40rpx;
+  height: 40rpx;
+}

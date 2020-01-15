@@ -1,0 +1,53 @@
+/* pages/land/land.wxss */
+
+.num {
+  width: 100%;
+  height: 100rpx;
+  display: inline-block;
+  margin-top: 20rpx;
+}
+
+.num input {
+  height: 100%;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 30rpx;
+  border: #eaeaea 1rpx solid;
+}
+
+.password {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.password input {
+  height: 100%;
+  font-size: 30rpx;
+  width: 90%;
+  margin-left: 5%;
+  border: #eaeaea 1rpx solid;
+}
+
+.sub {
+  margin: 5%;
+  width: 90%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+
+.sub button {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  background-color: #4357c0;
+}
+
+.forget{
+  width: 90%;
+  margin-left: 5%;
+  font-size: 30rpx;
+  color: #6b6b6b;
+  text-align: right;
+}

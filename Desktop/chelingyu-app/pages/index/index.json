@@ -1,0 +1,6 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "客户列表",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

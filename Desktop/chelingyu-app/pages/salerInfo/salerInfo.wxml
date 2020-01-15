@@ -1,0 +1,21 @@
+<!--pages/salerInfo/salerInfo.wxml-->
+<view class='top'>
+  <view style="background: rgba(0, 0, 0, 0.9); border-radius: 5px 5px 0 0;">
+    <image src='{{saler.wholesalerVoWithBLOBs.img}}' mode="aspectFit" bindtap="showImage"></image>
+  </view>
+  <view class='title' >
+    {{saler.wholesalerVoWithBLOBs.name}}
+    <image src='/img/zheng.png'></image>
+  </view>
+  <view>
+    <view class='address'>
+      <image src='/img/address.png'></image>
+      {{saler.provincesName}}{{saler.cityName}}{{saler.countyName}}{{saler.wholesalerVoWithBLOBs.address}}
+    </view>
+    <view class='bottom' data-phone='{{saler.wholesalerVoWithBLOBs.phone1}}' data-openId='{{saler.wholesalerVoWithBLOBs.openId}}' bindtap='_phone'>
+      <image src='/img/lianxi.png'></image>
+    </view>
+  </view>
+</view>
+<view class='ye'>主营业务</view>
+<view class='wu'>{{saler.wholesalerVoWithBLOBs.service}}</view>

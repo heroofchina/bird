@@ -1,0 +1,65 @@
+<!--pages/release/release.wxml-->
+<view class="view-box">
+  <view class="weui-panel">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd">
+          <image class="weui-media-box__thumb" src="{{userInfo.serviceUserVo.img}}" alt=""></image>
+        </view>
+        <view class="weui-media-box__bd">
+          <h4 class="weui-media-box__title">{{userInfo.serviceUserVo.name}}</h4>
+          <p class="weui-media-box__desc input-image">
+            <image src='/img/di.png'></image> {{userInfo.serviceUserVo.address}}
+          </p>
+          <p class="weui-media-box__desc input-image">
+            <span class="input-image" wx:if="{{userInfo.serviceUserVo.phone}}">
+              <image src='/img/lianxi.png'></image> {{userInfo.serviceUserVo.phone}}
+            </span>
+            <span class="input-image" wx:if="{{userInfo.serviceUserVo.wechat}}">
+              <image src='/img/weixinhao.png'></image> {{userInfo.serviceUserVo.wechat}}
+            </span>
+          </p>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">主营业务</view>
+  <view class="weui-cells">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class='service2'>
+          <view wx:for="{{userInfo.businessVos}}" wx:key="" class="check">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">商家相册</view>
+  <view class="weui-cells weui-cells_form">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <p class="weui-uploader__title">图片列表</p>
+          </view>
+          <view class="weui-uploader__bd">
+            <ul class="weui-uploader__files">
+              <li wx:for="{{photos}}" bindtap="showImage" wx:key="{{item}}" data-list="{{photos}}" data-image="{{item}}" class="weui-uploader__file" style="background-image:url({{item}})"></li>
+            </ul>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="padding: 20px 30px;">
+    <view style="position: relative;">
+      <button class="weui-btn weui-btn_primary" data-phone='{{userInfo.serviceUserVo.phone}}' bindtap='_phone'>联系我 {{userInfo.serviceUserVo.phone}}</button>
+      <button wx:if="{{id}}" bindtap="gohome" class="weui-btn weui-btn_primary">返回首页</button>
+      <view wx:else style="margin-top: 20px;">
+        <button class="weui-btn weui-btn_primary">分享</button>
+        <button class="share-button" open-type="share" type="primary"></button>
+      </view>
+    </view>
+  </view>
+</view>

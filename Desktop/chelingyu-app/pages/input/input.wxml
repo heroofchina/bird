@@ -1,0 +1,13 @@
+<!--pages/input/input.wxml-->
+<view class='page' wx:for="{{list}}" wx:key=""  wx:for-index="index">
+  <view class='header'>
+    <image src='/img/history.png'></image>
+    {{item.title}}
+  </view>
+  <view wx:for="{{item.list}}" wx:key=""  wx:for-index="pindex"  wx:for-item="datas" class="{{datas.check ? 'check' : 'uncheck'}}" data-index="{{index}}" data-pindex="{{pindex}}" bindtap='_selection'>
+    {{datas.title}}
+  </view>
+</view>
+<view class='sub'>
+  <button bindtap='add'>完 成</button>
+</view>

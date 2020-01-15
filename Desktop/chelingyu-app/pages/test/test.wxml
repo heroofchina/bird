@@ -1,0 +1,9 @@
+<!--pages/test/test.wxml-->
+
+<view class='circle position-absol'>
+  <text wx:if="{{!anmationShow}}" class='fz-12 fot-col block'>按住话筒说话，松开后自动识别文字</text>
+  <text wx:if="{{anmationShow}}" class='fz-12 fot-col block'>松手为您匹配设计公司</text>
+  <image bindtouchstart='startHandel' bindtouchend='endHandle' mode="widthFix" src="https://www.baidu.com/img/baidu_jgylogo3.gif" class='imgwh'></image>
+  <view class='c2' wx:if="{{anmationShow}}"></view>
+  <view class='c3' wx:if="{{anmationShow}}"></view>
+</view>

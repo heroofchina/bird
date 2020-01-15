@@ -1,0 +1,110 @@
+<!--pages/add/add.wxml-->
+<view class="view-box">
+  <form bindsubmit="formSubmit">
+    <view class="weui-cells weui-cells_form" style="margin-top: 0;">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <p class="weui-uploader__title">车牌图片</p>
+              </view>
+              <view class="weui-uploader__bd">
+                <ul class="weui-uploader__files" wx:if="{{customer.img || (tempFilePaths && tempFilePaths.length > 0)}}">
+                  <li bindtap="showImage" data-image="{{customer.img || tempFilePaths[0]}}" class="weui-uploader__file" style="background-image:url({{customer.img || tempFilePaths[0]}})"></li>
+                </ul>
+                <view class="weui-uploader__input-box" wx:else bindtap='_camera'>
+                  <input class="weui-uploader__input" type="file" accept="image/*" multiple="" />
+                </view>
+              </view>
+            </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_form">
+      <view class="weui-cell weui-cell_vcode">
+        <view class="weui-cell__hd input-image">
+          <image src='/img/haoma.png'></image>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="plate" value='{{plate}}' placeholder='车牌号' bindinput="doClick"></input>
+        </view>
+        <view class="weui-cell__ft">
+          <button class="weui-vcode-btn" bindtap='_plate'>车牌检测</button>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="weui-cells__title text-center primary-color" bindtap="_history">历史项目</view> -->
+    <view class="weui-cells weui-cells_form">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">客户名称：</view>
+        <view class="weui-cell__bd">
+          <input name="name" value='{{customer.name}}' placeholder='请输入客户姓名'></input>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">客户电话：</view>
+        <view class="weui-cell__bd">
+          <input name="phone" value='{{customer.phone}}' placeholder='请输入电话'></input>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd">启用时间：</view>
+        <view class="weui-cell__bd text-right" style="width: 100%;">
+          <picker mode="date" bindchange="bindStartChange">{{start}}</picker>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">行驶里程：</view>
+        <view class="weui-cell__bd">
+          <input name="mileage" value='{{customer.mileage}}' placeholder='请输入总里程' bindinput="click"></input>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title" bindtap="_history">预计保养时间</view>
+    <view class='service2' style="background: #ffffff; padding-top: 10px; padding-bottom: 10px;">
+      <view class="uncheck {{num == 5000 ? 'active' : ''}}" data-num='5000' bindtap='_selection'>
+        5000公里
+      </view>
+      <view class="uncheck {{num == 7000 ? 'active' : ''}}" data-num='7000' bindtap='_selection'>
+        7000公里
+      </view>
+      <view class="uncheck {{num == 10000 ? 'active' : ''}}" data-num='10000' bindtap='_selection'>
+        10000公里
+      </view>
+      <view class="uncheck {{num == 20000 ? 'active' : ''}}" data-num='20000' bindtap='_selection'>
+        20000公里
+      </view>
+    </view>
+    <view class="weui-cells__title" bindtap="_history">
+      下次进店提醒设置
+      <span class="pull-right primary-color">
+        <picker mode="date" bindchange="bindDateChange">{{date}}</picker>
+      </span>
+    </view>
+    <view class="weui-cells weui-cells_form">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <textarea class="weui-textarea" name="note" value="{{customer.note}}" placeholder='提醒备注' rows="1" style="height: 50px;"></textarea>
+            </view>
+        </view>
+    </view>
+    <view class="empty-20"></view>
+    <view>
+      <view style="padding: 20px 30px;">
+        <button form-type="submit" class="weui-btn weui-btn_primary">保存</button>
+      </view>
+      <!-- <view class='lu'>
+        <button form-type="submit" class="weui-btn weui-btn_primary">保存</button>
+      </view>
+      <view class='li2' wx:if="{{customer.id}}">
+        <navigator hover-class="none" url='/pages/input/input?customerId={{customer.id}}'>
+          <button class="weui-btn weui-btn_default">录入项目</button>
+        </navigator>
+      </view>
+      <view class='li2' wx:else>
+        <button class="weui-btn weui-btn_default">录入项目</button>
+      </view> -->
+    </view>
+  </form>
+</view>

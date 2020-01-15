@@ -1,0 +1,196 @@
+/**index.wxss**/
+.title{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  height: 50rpx;
+  color: #3f52b4;
+  display: inline-block;
+}
+.num{
+  width: 100rpx;
+  margin-top: 25rpx;
+  font-size: 36rpx;
+  height: 50rpx;
+  color: #3f52b4;
+  display: inline-block;
+}
+.time{
+  margin-left: 15rpx;
+  border-radius: 5px;
+  height: 50rpx;
+  background-color: #eaeaea;
+  width: 115rpx;
+  color: #828282;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 50rpx;
+  display: inline-block;
+}
+.time.active{
+  background-color: #3f52b4;
+  color: #ffffff;
+}
+.img{
+  margin-left: 20rpx;
+  display: inline-block
+}
+.img image{
+  position: relative;
+  top: 10rpx;
+  height: 45rpx;
+  width: 45rpx;
+}
+.bodyimg {
+  display: inline-block;
+}
+.bodyimg image{
+  height: 120rpx;
+  width: 162rpx;
+  margin-left: 20rpx;
+  margin-top: 55rpx;
+}
+.info{
+  width: 460rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.name{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+}
+.history{
+  height: 50rpx;
+  width: 320rpx;
+  font-size: 20rpx;
+  color: #aaa;
+  line-height: 50rpx;
+  overflow: hidden;white-space:nowrap;-ms-text-overflow:ellipsis;-o-text-overflow:ellipsis;text-overflow:ellipsis;  
+}
+.shijian{
+  font-size: 24rpx;
+}
+
+.right{
+  display: inline-block;
+}
+.right image{
+  position: relative;
+  top: -20px;
+  height: 50rpx;
+  width: 55rpx;
+}
+
+
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.sub{
+  position: fixed;
+  bottom: 0rpx;
+  margin-left: 18rpx;
+  width: 75%;
+  height: 100rpx;
+}
+.sub button{
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  background-color:#4357c0; 
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+.sub1{
+  position: fixed;
+  bottom: 0rpx;
+  left: 590rpx;
+  margin-left: 18rpx;
+  width: 15%;
+  height: 100rpx;
+  line-height:100rpx;
+  
+}
+.sub1 button{
+  color: #ffffff;
+  width: 100%;
+  background-color:#4357c0; 
+  font-size: 22rpx;
+  height: 100%;
+  line-height:100rpx;
+}
+.text{
+  position: relative;
+  left: 90rpx;
+  top: -110rpx;
+  display: block;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #dc2625;
+  color: #ffffff;
+  font-size: 16rpx;
+  text-align: center;
+  line-height: 30rpx;
+}
+
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.window{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color:rgba(0, 0, 0, .5);
+  z-index: 2;
+  top: 0rpx;
+  left: 0rpx;
+}
+.windowimage{
+  height: 700rpx;
+  width: 500rpx;
+  position:relative;
+  top:200rpx;
+  left:130rpx;
+}
+.window button{
+  position:relative;
+  height: 60rpx;
+  width: 200rpx;
+  font-size: 24rpx;
+  top: 200rpx;
+
+}
+.tk{
+  height: 200rpx;
+  width: 40%;
+  line-height: 200rpx;
+  position: fixed;
+  background-color:rgb(1, 35, 231);
+  z-index: 2;
+  top: 400rpx;
+  left: 220rpx;
+  text-align: center;
+  color: #ffffff;
+}

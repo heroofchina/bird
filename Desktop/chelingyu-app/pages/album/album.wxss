@@ -1,0 +1,44 @@
+/* pages/album/album.wxss */
+.photo{
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  height: 90rpx;
+  width: 100%;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+
+.photo2{
+  height: 150rpx;
+  width: 100%;
+  line-height: 100rpx;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3f52b4;
+  font-size: 30rpx;
+}
+.photo2 image{
+  width: 200rpx;
+  height: 150rpx;
+  display: inline-block;
+  margin-left: 40rpx;
+}
+.sub{
+  margin-top: 20rpx;
+  margin-bottom: 50rpx;
+  margin-left: 18rpx;
+  width: 95%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.sub button{
+  color: #ffffff;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  background-color:#4357c0; 
+}

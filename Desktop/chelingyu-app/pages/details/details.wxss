@@ -1,0 +1,52 @@
+/* pages/details/details.wxss */
+.top{
+  margin: 20rpx;
+  font-size: 24rpx;
+  color: #929292;
+}
+.body{
+  width: 710rpx;
+  margin-left: 10rpx;
+}
+.title{
+  width: 710rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #3f52b4;
+  margin-bottom: 20rpx;
+}
+.title image{
+  margin-left: 560rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+.name{
+  height: 60rpx;
+  width: 710rpx;
+  font-size: 26rpx;
+  background-color: #d5dbee;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+}
+.info{
+  height: 60rpx;
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  padding-left:16rpx; 
+  border-bottom: #929292 solid 1rpx;
+  border-left: #929292 solid 1rpx;
+  border-right: #929292 solid 1rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.info view{
+  display: inline;
+}
+.info view:nth-child(2){
+  margin-left: 150rpx;
+}
+.info view:nth-child(3){
+  margin-left: 150rpx;
+}

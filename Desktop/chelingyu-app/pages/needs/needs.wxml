@@ -1,0 +1,21 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="view-box">
+  <view class="weui-panel" wx:if="{{demand && demand.length > 0}}" style="margin-top: 0;">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_appmsg" wx:for="{{demand}}" wx:key bindtap="showDetail" data-id="{{item.id}}">
+        <view class="weui-media-box__bd">
+          <h4 class="weui-media-box__title" style="font-size: 15px;">发布时间：{{item.createTime}}</h4>
+          <p class="weui-media-box__desc">
+            <span class="desc-item" wx:for="{{item.demandInfos}}" wx:key wx:if="{{item.name}}">{{item.name}}</span>
+          </p>
+        </view>
+        <view class="tu-right-arrow">
+          {{item.count}}条反馈
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line" wx:else>
+    <span class="weui-loadmore__tips">暂无数据</span>
+  </view>
+</view>

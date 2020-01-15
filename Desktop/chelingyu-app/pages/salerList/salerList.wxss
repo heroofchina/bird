@@ -1,0 +1,89 @@
+/* pages/salerList/salerList.wxss */
+.pinpai{
+  margin: 20rpx;
+  font-size: 30rpx;
+  color:  #3f52b4;
+  display: inline-block;
+  width: 550rpx;
+}
+.xu{
+  padding: 5rpx;
+  background-color: #3f52b4;
+  font-size: 24rpx;
+  color: #ffffff;
+  width: 150rpx;
+  height: 40rpx;
+  border-radius: 15rpx;
+  text-align: center;
+  line-height: 40rpx;
+  display: inline-block;
+}
+.bodyimg {
+  display: inline-block;
+}
+.bodyimg image{
+  height: 120rpx;
+  width: 162rpx;
+  margin-left: 20rpx;
+}
+.info{
+  width: 460rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.name{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+}
+.name image{
+  position: relative;
+  top:5rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+.history{
+  height: 50rpx;
+  width: 100%;
+  font-size: 22rpx;
+  color: #aaa;
+  line-height: 60rpx;
+  overflow: hidden;white-space:nowrap;-ms-text-overflow:ellipsis;-o-text-overflow:ellipsis;text-overflow:ellipsis;  
+}
+.history image{
+  position: relative;
+  top:5rpx;
+  height: 24rpx;
+  width: 24rpx;
+}
+.shijian{
+  color:  #aaa;
+  font-size: 22rpx;
+  display: inline-block;
+  margin-right: 100rpx;
+}
+.right{
+  display: inline-block;
+}
+.right image{
+  position: relative;
+  top: -20px;
+  height: 50rpx;
+  width: 55rpx;
+}
+.list-box{
+  position: relative;
+}
+.list-box > .icon-tag{
+  position: absolute;
+  right: -35px;
+  top: -2px;
+}
+.input-image image{
+  left: 0;
+}
+.list-desc{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}

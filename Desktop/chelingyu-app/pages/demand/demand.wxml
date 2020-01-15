@@ -1,0 +1,134 @@
+<!--pages/demand/demand.wxml-->
+<!-- <view class="view-box" style="padding-bottom: 50px;"> -->
+<view class="view-box">
+  <form bindsubmit="form" report-submit = "true">
+    <view class="weui-cells" style="margin-top: 0;">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd">一级分类</view>
+        <view class="weui-cell__bd text-right" style="width: 100%;">
+          <picker bindchange="bindChange" value="{{index}}" range="{{cate}}" range-key="title">
+            {{cate[index].title}}
+          </picker>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd">二级分类</view>
+        <view class="weui-cell__bd text-right" style="width: 100%;">
+          <navigator hover-class='none' url='/pages/alphabetList1/alphabetList?cateId={{cateId}}'>
+            {{vcateTitle}}
+          </navigator>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_form">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+              <p class="weui-uploader__title">17位编码图片</p>
+            </view>
+            <view class="weui-uploader__bd">
+              <ul class="weui-uploader__files" wx:if="{{filePaths}}">
+                <li class="weui-uploader__file" style="background-image:url({{filePaths[0]}})" bindtap="showImage" data-image="{{filePaths[0]}}"></li>
+              </ul>
+              <view class="weui-uploader__input-box" wx:else>
+                <input class="weui-uploader__input" type="file" accept="image/*" multiple="" bindtap='_cm'/>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">编码：</view>
+        <view class="weui-cell__bd">
+          <input value='{{vin}}' name='code' placeholder='请输入编码'></input>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_form">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+              <p class="weui-uploader__title">询价图片</p>
+            </view>
+            <view class="weui-uploader__bd">
+              <ul class="weui-uploader__files" wx:if="{{filePaths1}}">
+                <li class="weui-uploader__file" style="background-image:url({{filePaths1[0]}})" bindtap="showImage" data-imgkey="img1" data-image="{{filePaths1[0]}}"></li>
+              </ul>
+              <view class="weui-uploader__input-box" wx:else>
+                <input class="weui-uploader__input" type="file" accept="image/*" multiple="" bindtap='_cm1'/>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">
+      <span>需求信息</span>
+      <span class="pull-right primary-color" bindtap='show'>添加</span>
+    </view>
+    <view class="weui-cells" wx:if="{{list && list.length > 0}}">
+      <view class="weui-cell" wx:for='{{list}}'>
+        <view class="weui-cell__bd">{{item}}</view>
+        <view class="weui-cell__ft danger-color" bindtap='_delete' data-index='{{index}}'>移除</view>
+      </view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <span class="weui-loadmore__tips">请添加需求信息</span>
+    </view>
+    <!--<view class='parts' wx:for='{{tempFilePaths}}' wx:key>
+      <image src='{{item}}'></image>
+      <view class='delete danger-color' bindtap='_deleteImage' data-index='{{index}}'>移除</view>
+    </view>-->
+    <!-- <view class='add'>
+      <button bindtap='_camera'>添加照片</button>
+    </view> -->
+    <view style="padding: 20px;">
+      <button formType="submit" class="weui-btn weui-btn_primary">发布</button>
+    </view>
+  </form>
+
+  <form bindsubmit="formSubmit">
+    <view class="window {{isTrue?'show':'hide'}}">
+      <view class='windowContent'>
+        <view class='windowText'>
+          请输入一个需求信息
+        </view>
+        <view class='windowInput'>
+          <input name="title" name="title" value='{{title}}'></input>
+        </view>
+        <view class='windowButton'>
+          <button formType="submit">提交</button>
+          <button bindtap='hide'>取消</button>
+        </view>
+      </view>
+    </view>
+  </form>
+  <!--<view class="footer">
+    <view class="footer-box">
+      <view class="item cart">
+        <view class="placeholder">
+          <navigator hover-class='none' url='/pages/feedback/feedback'>
+            收到报价
+          </navigator>
+        </view>
+      </view>
+      <view class="item cart pay" bindtouchstart='startHandel' bindtouchend='endHandle'>
+        <view class="placeholder input-image">
+          <span>搜索</span>
+          <image src="/img/microphone-2.png" style="left: 5px; top: 2px;"></image>
+        </view>
+      </view>
+      <view class="item cart">
+        <view class="placeholder">
+          <navigator hover-class='none' url='/pages/needs/needs'>
+            {{num > 0 ? '询价(' + num + ')' : '发布询价'}}
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>-->
+</view>

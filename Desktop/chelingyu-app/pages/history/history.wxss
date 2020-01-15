@@ -1,0 +1,28 @@
+/* pages/history/history.wxss */
+.header{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #3f52b4;
+}
+.header image{
+  position: relative;
+  top: 5rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.info{
+  background: #f2f2f2;
+  width: 670rpx;
+  height: auto;
+  margin: 20rpx;
+  padding: 20rpx;
+  box-shadow:5px 5px 5px #c9c7c7;
+}
+.time{
+  font-size: 28rpx;
+  color: #3f52b4;
+}
+.service{
+  font-size: 24rpx;
+}

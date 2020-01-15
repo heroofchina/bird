@@ -1,0 +1,20 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="header_nav">
+  <view>
+    <navigator open-type="redirect" url='../feedback/feedback' hover-class="none">全部需求</navigator>
+  </view>
+  <view>
+    <navigator open-type="redirect" url='../receive/receive' hover-class="none" class="active">收到反馈</navigator>
+  </view>
+</view>
+<navigator url='../details/details' hover-class="none">
+  <view wx:for="{{demand}}" wx:key="">
+    <view class='body'>
+      <view class='time'>发布时间：{{item.createTime}}</view>
+      <view class='info' wx:for="{{item.demandInfos}}" wx:key="">
+        <view wx:if="{{item.name}}">{{item.name}}</view>
+      </view>
+       <view class='num'>{{item.count}}条反馈</view>
+    </view>
+  </view>
+</navigator>

@@ -1,0 +1,33 @@
+<!--pages/salerList/salerList.wxml-->
+<view class="view-box">
+  <view class="weui-panel" wx:if="{{wholesaler && wholesaler.length > 0}}">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_appmsg" wx:for="{{wholesaler}}" wx:key bindtap="showDetail" data-id="{{item.bs.id}}">
+        <view class="weui-media-box__hd">
+          <image class="weui-media-box__thumb" src="{{item.bs.img || '/img/add-img.png'}}" alt=""></image>
+        </view>
+        <view class="weui-media-box__bd list-box">
+          <view class="input-image icon-tag">
+            <image wx:if="{{item.bs.authentication == 0}}" src='/img/zheng.png'></image>
+            <image wx:if="{{item.bs.qa == 0}}" src='/img/bao.png'></image>
+            <image wx:if="{{item.bs.sincerity == 0}}" src='/img/cheng.png'></image>
+          </view>
+          <h4 class="weui-media-box__title" style="font-size: 15px;">{{item.bs.name}}</h4>
+          <p class="weui-media-box__desc list-desc input-image">
+            <image src='/img/di.png'></image> {{item.bs.address || '--'}}
+          </p>
+          <p class="weui-media-box__desc list-desc">
+            <span style="margin-right: 20px;">被浏览：{{item.browseTimes}}</span>
+            <span>被联系：{{item.contactTimes}}</span>
+          </p>
+        </view>
+        <view class="tu-right-arrow input-image" data-phone='{{item.bs.phone1}}' data-id="{{item.bs.id}}" data-openId="{{item.bs.openId}}" catchtap='_phone'>
+          <image src='/img/dh2.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line" wx:else>
+    <span class="weui-loadmore__tips">暂无数据</span>
+  </view>
+</view>

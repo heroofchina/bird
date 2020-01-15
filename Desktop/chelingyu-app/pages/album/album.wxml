@@ -1,0 +1,27 @@
+<!--pages/album/album.wxml-->
+<view class="view-box">
+  <form bindsubmit="formSubmit">
+    <view class="weui-cells weui-cells_form">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <p class="weui-uploader__title">门店照片</p>
+              </view>
+              <view class="weui-uploader__bd">
+                <ul class="weui-uploader__files">
+                  <li :data-index="{{index}}" bindtap="showImage" wx:for="{{tempFilePaths}}" data-image="{{item}}" class="weui-uploader__file" style="background-image:url({{item}})"></li>
+                </ul>
+                <view class="weui-uploader__input-box" wx:if="{{!tempFilePaths || tempFilePaths.length < 9}}" bindtap='_camera'>
+                  <input class="weui-uploader__input" type="file" accept="image/*" multiple="" />
+                </view>
+              </view>
+            </view>
+        </view>
+      </view>
+    </view>
+    <view style="padding: 20px 30px;">
+      <button class="weui-btn weui-btn_primary" form-type="submit">下一步</button>
+    </view>
+  </form>
+</view>

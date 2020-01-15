@@ -1,0 +1,74 @@
+<!--pages/information/information.wxml-->
+<view class="view-box">
+  <form bindsubmit="formSubmit">
+    <view class="weui-cells weui-cells_form" style="margin-top: 0;">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">维修厂名称：</view>
+        <view class="weui-cell__bd">
+          <input name="name" value='{{userInfo.serviceUserVo.name}}'></input>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">详细地址：</view>
+        <view class="weui-cell__bd">
+          <input name='address' value='{{userInfo.serviceUserVo.address}}' placeholder='请输入详细地址'></input>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_form">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <p class="weui-uploader__title">门店主图</p>
+              </view>
+              <view class="weui-uploader__bd">
+                <ul class="weui-uploader__files" wx:if="{{userInfo.serviceUserVo.img || (tempFilePaths && tempFilePaths.length > 0)}}">
+                  <li bindtap="showImage" data-image="{{userInfo.serviceUserVo.img || tempFilePaths[0]}}" class="weui-uploader__file" style="background-image:url({{userInfo.serviceUserVo.img || tempFilePaths[0]}})"></li>
+                </ul>
+                <view class="weui-uploader__input-box" wx:else bindtap='_camera'>
+                  <input class="weui-uploader__input" type="file" accept="image/*" multiple="" />
+                </view>
+              </view>
+            </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">主营业务</view>
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class='service2'>
+            <view wx:for="{{mainBusiness}}" wx:key="" class="uncheck {{item.check ? 'active' : ''}}" data-index="{{index}}" bindtap='_selection'>
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">扩展信息</view>
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">联系人：</view>
+        <view class="weui-cell__bd">
+          <input name='contacts'value='{{userInfo.serviceUserVo.contacts}}' placeholder='联系人'></input>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">联系电话：</view>
+        <view class="weui-cell__bd">
+          <input name='phone' value='{{userInfo.serviceUserVo.phone}}' placeholder='固定电话或手机'></input>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">微信号</view>
+        <view class="weui-cell__bd">
+          <input name='wechat' value='{{userInfo.serviceUserVo.wechat}}' placeholder='选填'></input>
+        </view>
+      </view>
+    </view>
+    <view style="padding: 20px 30px;">
+      <button class="weui-btn weui-btn_primary" form-type="submit">下一步</button>
+    </view>
+  </form>
+</view>
