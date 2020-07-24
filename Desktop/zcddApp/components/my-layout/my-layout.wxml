@@ -1,0 +1,17 @@
+<!-- components/my-layout/my-layout.wxml -->
+<block wx:if="{{networking}}">
+    <slot>
+    </slot>
+</block>
+
+<block wx:if="{{!networking}}">
+   
+   <view class='fx-box fx-ai-c fx-jc-c fx-fd-c net-work-container' bindtap='reloadnet'>
+       
+            <image src='../../images/no-network.png'></image>
+            <view class='theme-basic-font layout-mt16 font-color6 font-size28'>当前无网络</view>
+            <view class='theme-basic-font layout-mt16 font-color4 font-size32'>请轻触屏幕重试</view>
+        
+   </view>
+
+</block>

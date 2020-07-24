@@ -1,0 +1,9 @@
+<!--templates/home-nav.wxml-->
+<template name="homeNav">
+ <view class="home-nav full-r-w" style="height:{{navHeight}}rpx;">
+    <view class="full-r-w" style="height:{{navTop}}rpx;">
+       <view class="nav-address"></view>
+       <view class="nav-search"></view>
+    </view>
+ </view>
+</template>

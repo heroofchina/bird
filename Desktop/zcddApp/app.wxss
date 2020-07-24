@@ -1,0 +1,39 @@
+/**app.wxss**/
+page{width: 100%;}
+.fx-box{display: flex;}  .fx-ai-c{align-items: center;}  .fx-ai-e{align-items: flex-end;}
+.fx-ai-s{align-items: flex-start;} .fx-jc-c{justify-content: center;} .fx-jc-s{justify-content: flex-start;} .fx-ai-st{align-items: stretch;} 
+.fx-jc-e{justify-content: flex-end;}  .fx-jc-sb{justify-content:space-between} .fx-jc-sa{justify-content:space-around}  .fx-fd-c{flex-direction: column;} .fx-fd-r{flex-direction: row;}
+.fx-wp{flex-wrap: wrap} .full-r-w{width: 100%;}  .full-r-h{height: 100%;} .full-a-w{width: 100vw;}  .full-a-h{height: 100vh;}  .full-r-s{overflow-y: scroll;} .fx-1{flex: 1;}
+::-webkit-scrollbar {width: 0;height: 0;color: transparent;display: none;} .theme-container{background-color:rgba(255,255,255,1);}
+.theme-container-back{background-color:rgba(248,248,248,1);} .theme-layout-back{background-color: #1a7633;}.theme-basic-font{font-size:28rpx;font-family:PingFangSC-Regular,PingFang SC;
+font-weight:400;color:rgba(0,0,0,0.85);}  .theme-basic-md-font{font-family:PingFangSC-Medium,PingFang SC;font-weight:500;}  .theme-basic-dd-font{font-size:36rpx;font-family:DINAlternate-Bold,DINAlternate;font-weight:bold;color:rgba(10,126,42,1);}
+.theme-base-back{background:rgba(10,126,42,1)}
+.theme-basic-btn{background:rgba(10,126,42,1);box-shadow:0px 4rpx 20rpx 0px rgba(23,96,43,0.2);}  .box-shadow-back{box-shadow:0px 4rpx 40rpx 0px rgba(0,0,0,0.05);}
+.theme-base-icon{width: 24rpx;height: 24rpx;display: inline-block;}
+.theme-base-icon36{width: 32rpx;height: 32rpx;}  .theme-base-icon40{width: 40rpx;height: 40rpx;}
+.theme-base-icon48{width:48rpx;height: 48rpx;} .theme-base-icon64{width:64rpx;height: 64rpx;}
+.theme-base-icon96{width:96rpx;height:96rpx;}
+.font-size22{font-size: 22rpx;}   .font-size24{font-size: 24rpx;}  .font-size28{font-size: 28rpx;}
+.font-size32{font-size: 32rpx;} .font-size34{font-size: 34rpx;} .font-size36{font-size: 36rpx;}
+.font-size40{font-size: 40rpx;}  .font-size64{font-size: 64rpx;}  .font-size48{font-size: 48rpx;}
+.font-color1{color: rgba(0,0,0,0.45);}  .font-color2{color:rgba(0,0,0,0.65);}  .font-color3{color:rgba(255,255,255,1);}
+.font-color4{color:rgba(0,0,0,0.85);} .font-color5{color:rgba(51,51,51,1);}
+.font-color6{color:rgba(0,0,0,0.25);}  .font-color7{color: #0A7E2A} .font-color8{color: rgba(26,118,51,1);} .font-color9{color: rgba(10,126,42,1);}  .font-color10{color:rgba(255,77,79,1);}
+.basic-bd{border-radius: 16rpx;}   .basic-bd24{border-radius: 24rpx;}  .basic-bd8{border-radius: 8rpx;} .basic-bd32{border-radius: 32rpx;}  .basic-bd44{border-radius: 44rpx;}
+.layout-mt6{margin-top:6rpx;}  .layout-mt8{margin-top:8rpx;}  .layout-mt12{margin-top:12rpx;} .layout-mb8{margin-bottom: 8rpx;}  .layout-mb12{margin-bottom: 12rpx;} .layout-mb16{margin-bottom: 16rpx;}  .layout-mb32{margin-bottom: 32rpx;} .layout-mb80{margin-bottom: 80rpx;}
+.layout-mb24{margin-bottom: 24rpx;}  .layout-mb40{margin-bottom: 40rpx;} 
+.layout-mt16{margin-top: 16rpx;}  .layout-mt24{margin-top: 24rpx;} .layout-mt26{margin-top: 26rpx;}  .layout-mt28{margin-top: 28rpx;}  .layout-mt30{margin-top: 30rpx;}
+.layout-mt32{margin-top: 32rpx;} .layout-mt40{margin-top: 40rpx;}  .layout-mt48{margin-top: 48rpx;}  .layout-mt56{margin-top:56rpx;} 
+.layout-mt64{margin-top: 64rpx;}  .layout-mt164{margin-top: 164rpx;}  .layout-mt20{margin-top: 20rpx;} 
+.layout-mr6{margin-right: 6rpx;}  .layout-mr8{margin-right: 8rpx;} .layout-mr16{margin-right: 16rpx;} .layout-mr20{margin-right: 20rpx;} .layout-mr22{margin-right: 22rpx;}.layout-mr24{margin-right: 24rpx;} .layout-mr32{margin-right: 32rpx;} .layout-mr40{margin-right: 40rpx;} .layout-mb20{margin-bottom:20rpx;} .layout-mb32{margin-bottom:32rpx;}  .layout-mb34{margin-bottom:34rpx;}  
+.layout-mb48{margin-bottom:48rpx;}  .layout-ml12{margin-left: 12rpx;} 
+.layout-ml16{margin-left: 16rpx;} .layout-ml24{margin-left: 24rpx;}  .layout-ml32{margin-left: 32rpx;}
+.layout-ml40{margin-left: 40rpx;}  .layout-ml48{margin-left: 48rpx;}   .empty-box{margin-top:160rpx;}
+.pad-top16{padding-top: 16rpx;}   .pad-top32{padding-top: 32rpx;}
+.pad-12{padding-bottom: 12rpx;} .pad-16{padding-bottom: 16rpx;}
+.pad-32{padding-bottom:32rpx;} .pad-48{padding-bottom:48rpx;} .pad-120{padding-bottom:120rpx;}
+.pad-100{padding-bottom: 100rpx;}
+.basic-image{width: 100%;height: 100%;display: inline-block;} 
+.image-block{display: inline-block;}
+.his-care-b-w{width: 654rpx;}  .his-care-memu-w{width:670rpx;}.his-care-c-w{width: 686rpx;}
+.his-care-m-w{width: 702rpx;}  

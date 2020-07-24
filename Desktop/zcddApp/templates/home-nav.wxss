@@ -1,0 +1,4 @@
+/* templates/home-nav.wxss */
+.home-nav{
+  background-color: #0087ac;
+}

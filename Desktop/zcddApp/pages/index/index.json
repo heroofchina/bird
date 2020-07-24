@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-layout":"../../components/my-layout/my-layout"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black"
+}

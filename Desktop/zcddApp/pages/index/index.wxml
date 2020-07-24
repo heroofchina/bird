@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<import src="../../templates/home-nav.wxml"/>
+<view class="full-r-w">
+ <my-layout
+  networking="{{networking}}"
+  bind:reloadnetwork="reloadnetwork"
+  >
+  <template is="homeNav" data="{{navHeight,navTop}}"/>
+
+
+  </my-layout>
+</view>
