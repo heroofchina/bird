@@ -7,12 +7,30 @@ colors.setTheme({
     error: 'red'
 });
 
+var policyHandler=require('./utils/policyHandler');
+
+var utils=require('./utils');
+
+
+const sleep = time => new Promise(resolve => {
+    setTimeout(resolve, time);
+})
+
+
+async  function get_zgcgw_beijing_api(page){
+	console.log('get_zgcgw_beijing_api');
+	const list = await page.evaluate(() => {
+			
+		 	   var ele=document.querySelector('.ui_border');
+		 	   console.log('log',ele);
+    })
+}
 
 async function bootstarp() {
 
 	  console.log('启动爬取数据服务'.info);
 	  const browser = await puppeteer.launch({
-	  	timeout: 30000,
+	  	timeout: 100000,
 	  	headless: false
 	  })
 	  console.log('正在启动浏览器'.info);
@@ -23,30 +41,54 @@ async function bootstarp() {
 	    page.on('console', msg => {
 	      console.log('监听浏览器控制台的日志输出可忽略'.info);
 	      if (typeof msg === 'object') {
-
-	        console.log(JSON.stringify(msg).error)
+	        console.log(msg)
 	      } else {
 	        console.log(msg);
 	      }
 	    })
 
-	    await page.goto('http://zcdx.bda.gov.cn');
-
-	    const aHandle = await page.evaluateHandle(() => document.body);
-
-		const resultHandle = await page.evaluateHandle(body => body.innerHTML, aHandle);
-		console.log(await resultHandle.jsonValue());
-		await resultHandle.dispose();
-
-
+	    //    await page.goto('http://zcdx.bda.gov.cn',{
+		// 	    timeout: 0
+		// });
 		// page.on('response', async response => {
-		// 	console.log('get api data:::',response.url());
-		// 	if(response.url() =='http://zcdx.bda.gov.cn/lron/v2/bones/th/policy/search?region=110115403&pageSize=8&enabled=Y&sort=11&remote=Y'){
-		// 		 const data=await response.json();
-		// 		 console.log(data);
+		// 	if(response.url().includes('http://zcdx.bda.gov.cn/lron/v2/bones/th/policy/search?region=')){
+		// 		console.log('匹配到地址',response.url());
+		// 		let labelList=await response.json();
+		// 		 console.log('labelList',labelList);
+		// 		 if(labelList.code==0&&labelList.requestTimeQueue){
+		// 		 	let {list}=labelList.data;
+		// 		 	var policyList=policyHandler.get_zcdx_bda_api(list);
+		// 		 	console.log('get policy list:::',policyList);
+		// 		 	utils.save_data_2_json(policyList,{
+		// 		 		path:__dirname+'/jsons/',
+		// 		 		name:'zcdx.bda.gov.cn.json'
+		// 		 	});
+		// 		 }
 		// 	}
-		   
 		// })
+		await page.goto('http://zgcgw.beijing.gov.cn/zgc/zwgk/tzgg/index.html',{
+			    timeout: 0
+		});
+
+		await get_zgcgw_beijing_api(page);
+
+
+
+
+
+
+
+
+		// var wuhangbox=await page.$('.w_ul_list li');
+		// console.log(wuhangbox);
+		// var size=wuhangbox.length;
+		
+		
+		// 	    for(var i=0;i<size;i++){
+		// 	        var flname=$(wuhangbox[i]).find('.fl');
+		// 	        var fltime=$(wuhangbox[i]).find('.fr');
+		// 	        console.log(fltime.text());
+		// 	    }
 	    
 
 
